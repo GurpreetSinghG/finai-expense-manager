@@ -1,0 +1,76 @@
+#root { min-height: 100vh; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #0b1120; color: #eef2ff; font-family: Inter, "Segoe UI", Arial, sans-serif; }
+button, a { font: inherit; }
+button { cursor: pointer; }
+.app-shell { min-height: 100vh; }
+.sidebar { width: 245px; background: #111a2d; border-right: 1px solid #263148; padding: 30px 20px; display: flex; flex-direction: column; position: fixed; inset: 0 auto 0 0; }
+.brand { margin: 0 0 42px; font-size: 28px; letter-spacing: -1px; }
+.brand span { color: #42d6b0; }
+.menu-label, .muted { color: #8d9bb4; }
+.menu-label { font-size: 11px; letter-spacing: 1.5px; margin-bottom: 15px; }
+.sidebar nav { display: grid; gap: 8px; }
+.nav-link { color: #aebbd0; text-decoration: none; padding: 13px 12px; border-radius: 9px; font-size: 14px; }
+.nav-link:hover, .nav-link.active { background: #1d3040; color: #54e0bc; }
+.sidebar-bottom { margin-top: auto; display: flex; flex-direction: column; align-items: stretch; gap: 14px; border-top: 1px solid #263148; padding-top: 22px; }
+.sidebar-profile { display: flex; align-items: center; gap: 12px; }
+.avatar, .transaction-icon { display: grid; place-items: center; border-radius: 12px; background: #203c43; color: #54e0bc; }
+.avatar { width: 40px; height: 40px; flex: 0 0 40px; font-weight: 700; }
+.sidebar-bottom strong { font-size: 13px; }
+.sidebar-bottom p { margin: 4px 0 0; font-size: 12px; }
+.logout-button { width: 100%; padding: 10px 12px; color: #ff9d9d; background: #2b1c29; border: 1px solid #54303a; border-radius: 8px; text-align: left; font-size: 14px; }
+.logout-button:hover { background: #3b2028; border-color: #ff7373; }
+.main-content { margin-left: 245px; padding: 38px; max-width: 1600px; }
+.topbar, .panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.topbar h1 { margin: 8px 0 0; font-size: 30px; }
+.topbar .muted, .welcome .muted { font-size: 11px; letter-spacing: 1px; }
+.date-button, .text-button { background: transparent; border: 1px solid #334158; border-radius: 9px; color: #dbe5f5; padding: 11px 15px; }
+.welcome { margin: 32px 0 24px; padding: 26px; background: linear-gradient(110deg, #163b3b, #172b3b); border: 1px solid #28504d; border-radius: 16px; display: flex; align-items: center; justify-content: space-between; }
+.welcome h2 { font-size: 24px; margin: 10px 0; }
+.welcome p:last-child { color: #b3c7d1; margin-bottom: 0; }
+.welcome-mark { font-size: 45px; font-weight: 700; color: #51d9b5; opacity: .8; padding: 0 15px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.stat-card, .panel { border: 1px solid #29354b; background: #111a2b; border-radius: 14px; }
+.stat-card { padding: 21px; min-width: 0; }
+.stat-card p { margin: 0; font-size: 13px; }
+.stat-card h2 { margin: 18px 0 10px; font-size: clamp(20px, 2vw, 27px); letter-spacing: -.7px; overflow-wrap: anywhere; }
+.stat-note { color: #8190a9; font-size: 12px; }
+.panel { margin-top: 24px; padding: 24px; }
+.panel-heading h2 { margin: 0; font-size: 19px; }
+.panel-heading p { margin: 7px 0 0; font-size: 13px; }
+.text-button { border: 0; color: #51d9b5; }
+.text-button:hover { color: #8ff3d8; }
+.text-button:disabled { opacity: .5; cursor: not-allowed; }
+.transaction-row { display: flex; align-items: center; gap: 14px; padding: 17px 0; border-bottom: 1px solid #253047; }
+.transaction-row:last-child { border-bottom: 0; padding-bottom: 0; }
+.transaction-icon { width: 42px; height: 42px; flex: 0 0 42px; font-size: 20px; }
+.transaction-icon.credit-icon { color: #54e0bc; background: #203c43; }
+.transaction-icon.debit-icon { color: #ff7373; background: #3b2028; }
+.transaction-info { flex: 1; min-width: 0; display: grid; gap: 6px; }
+.transaction-info strong, .transaction-row > strong { font-size: 14px; }
+.transaction-info span { font-size: 12px; }
+.transaction-row > strong { white-space: nowrap; }
+.income { color: #56dbb3; }
+.expense, .login-error { color: #ff9d9d; }
+.demo-note { margin-top: 22px; text-align: center; font-size: 12px; color: #73819a; }
+.transaction-form { margin-top: 22px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.form-grid label, .login-card label { display: grid; gap: 8px; color: #cbd5e1; font-size: 13px; }
+.form-grid input, .form-grid select, .login-card input { width: 100%; padding: 12px; color: #eef2ff; background: #0b1120; border: 1px solid #334158; border-radius: 8px; outline: none; }
+.form-grid input:focus, .form-grid select:focus, .login-card input:focus { border-color: #42d6b0; }
+.add-button { margin-top: 20px; padding: 12px 18px; color: #0b1120; background: #42d6b0; border: 0; border-radius: 8px; font-weight: 700; }
+.add-button:hover { background: #65e7c5; }
+.add-button:disabled { opacity: .6; cursor: not-allowed; }
+.login-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #0b1120; }
+.login-card { width: 100%; max-width: 420px; padding: 32px; background: #111a2b; border: 1px solid #29354b; border-radius: 16px; }
+.login-card .brand { margin-bottom: 28px; }
+.login-card h2 { margin-bottom: 8px; }
+.login-card form { display: grid; gap: 18px; margin-top: 28px; }
+.login-card .add-button { margin-top: 4px; }
+.login-button { width: 100%; }
+.login-error, .auth-success { font-size: 13px; }
+.auth-success { color: #56dbb3; }
+.auth-switch { margin-top: 20px; text-align: center; color: #aebbd0; font-size: 13px; }
+.auth-switch button { background: transparent; border: 0; color: #51d9b5; cursor: pointer; font-weight: 600; }
+@media (max-width: 1100px) { .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .sidebar { position: static; width: auto; padding: 18px; } .brand { margin-bottom: 20px; } .sidebar nav { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sidebar-bottom { margin-top: 18px; } .main-content { margin-left: 0; padding: 20px; } .topbar { align-items: flex-start; } .topbar h1 { font-size: 25px; } .welcome { padding: 20px; } .welcome-mark { font-size: 32px; padding: 0; } .stats-grid, .form-grid { grid-template-columns: 1fr; } .panel { padding: 17px; } .transaction-row { gap: 10px; } .transaction-row > strong { font-size: 12px; } }

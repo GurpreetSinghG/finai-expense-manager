@@ -1,0 +1,16 @@
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+
+# Backend build output
+**/target/
+
+# Frontend dependencies and build output
+**/node_modules/
+**/dist/
+
+# Local-only configuration
+**/application-local.properties
+**/application-secret.properties
+.vscode/

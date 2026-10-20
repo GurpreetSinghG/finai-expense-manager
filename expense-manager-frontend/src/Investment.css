@@ -1,0 +1,461 @@
+
+.investment-page {
+  min-height: 100vh;
+  padding: 36px;
+  background: #f6f8fb;
+  color: #172033;
+}
+
+.investment-header,
+.investment-panel-heading,
+.investment-card-top,
+.investment-form-actions,
+.investment-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.investment-header {
+  margin-bottom: 28px;
+}
+
+.investment-header h1 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.investment-subtitle {
+  color: #758094;
+  margin: 0;
+}
+
+.investment-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.investment-stat-card,
+.investment-panel,
+.investment-card {
+  background: #fff;
+  border: 1px solid #e8edf3;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(25, 40, 65, 0.035);
+}
+
+.investment-stat-card {
+  padding: 22px;
+}
+
+.investment-stat-card p {
+  color: #758094;
+  font-size: 14px;
+  margin: 0 0 12px;
+}
+
+.investment-stat-card h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  overflow-wrap: anywhere;
+}
+
+.investment-positive {
+  color: #16845b;
+}
+
+.investment-negative {
+  color: #c63d4b;
+}
+
+.investment-panel {
+  padding: 26px;
+}
+
+.investment-panel-heading {
+  margin-bottom: 24px;
+}
+
+.investment-panel-heading h2 {
+  margin: 0 0 6px;
+}
+
+.investment-panel-heading p {
+  margin: 0;
+}
+
+.investment-primary-button,
+.investment-secondary-button,
+.investment-delete-button {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+.investment-primary-button {
+  background: #16845b;
+  color: white;
+}
+
+.investment-primary-button:hover {
+  background: #116d4a;
+}
+
+.investment-secondary-button {
+  border: 1px solid #dce3ec;
+  background: white;
+  color: #263449;
+}
+
+.investment-delete-button {
+  border: 1px solid #f2d4d4;
+  background: #fff7f7;
+  color: #bd3e3e;
+}
+
+.investment-primary-button:disabled,
+.investment-secondary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.investment-form {
+  background: #f8fafc;
+  border: 1px solid #e7edf4;
+  border-radius: 12px;
+  margin-bottom: 26px;
+  padding: 22px;
+}
+
+.investment-form h3 {
+  margin: 0 0 18px;
+}
+
+.investment-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.investment-form-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.investment-form-grid input,
+.investment-form-grid select {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #dce3ec;
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+  color: #172033;
+  background: #fff;
+}
+
+.investment-form-grid input:focus,
+.investment-form-grid select:focus {
+  outline: 2px solid #b8e5d0;
+  border-color: #16845b;
+}
+
+.investment-form-actions {
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.investment-error,
+.investment-message {
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.investment-error {
+  background: #fff1f1;
+  color: #b42318;
+}
+
+.investment-message {
+  background: #edf9f1;
+  color: #187347;
+}
+
+.investment-empty {
+  padding: 45px 20px;
+  text-align: center;
+}
+
+.investment-empty-icon,
+.investment-type-icon {
+  display: grid;
+  place-items: center;
+  background: #e9f7ef;
+  color: #16845b;
+  font-weight: 700;
+}
+
+.investment-empty-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  font-size: 28px;
+}
+
+.investment-empty h3 {
+  margin-bottom: 8px;
+}
+
+.investment-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.investment-card {
+  padding: 22px;
+  min-width: 0;
+}
+
+.investment-card-top {
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.investment-type-icon {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+.investment-card-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.investment-card-title h3 {
+  margin: 0 0 7px;
+  overflow-wrap: anywhere;
+}
+
+.investment-card-title p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.investment-card-top > strong {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.investment-values {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid #eef1f5;
+  border-bottom: 1px solid #eef1f5;
+}
+
+.investment-values div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.investment-values span {
+  color: #758094;
+  font-size: 12px;
+}
+
+.investment-values strong {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.investment-date,
+.investment-notes {
+  margin: 14px 0 0;
+  color: #667085;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.investment-card-actions {
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+  .investment-stats,
+  .investment-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .investment-page {
+    padding: 18px;
+  }
+
+  .investment-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .investment-panel {
+    padding: 18px;
+  }
+
+  .investment-panel-heading {
+    align-items: flex-start;
+  }
+
+  .investment-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .investment-values {
+    gap: 8px;
+  }
+
+  .investment-values strong {
+    font-size: 12px;
+  }
+
+  .investment-card-top {
+    flex-wrap: wrap;
+  }
+}
+
+/* FinAI dashboard theme for Investments */
+
+.investment-page {
+  background: #0b1020;
+  color: #edf3ff;
+  min-height: 100vh;
+}
+
+.investment-page .muted,
+.investment-page .investment-subtitle {
+  color: #8296b6;
+}
+
+/* Summary cards and portfolio panel */
+.investment-page .investment-stat-card,
+.investment-page .investment-panel,
+.investment-page .investment-card {
+  background: #111b2e;
+  color: #edf3ff;
+  border: 1px solid #253149;
+  box-shadow: none;
+}
+
+/* Form panel */
+.investment-page .investment-form {
+  background: #0b1426;
+  border-color: #253149;
+}
+
+.investment-page .investment-form-grid label {
+  color: #d4dced;
+}
+
+.investment-page .investment-form-grid input,
+.investment-page .investment-form-grid select {
+  background: #0b1020;
+  color: #edf3ff;
+  border: 1px solid #2b3852;
+}
+
+.investment-page .investment-form-grid input::placeholder {
+  color: #6f809c;
+}
+
+.investment-page .investment-form-grid input:focus,
+.investment-page .investment-form-grid select:focus {
+  outline: 2px solid #36d5b0;
+  border-color: #36d5b0;
+}
+
+/* Teal primary buttons */
+.investment-page .investment-primary-button {
+  background: #36d5b0;
+  color: #08221c;
+}
+
+.investment-page .investment-primary-button:hover {
+  background: #48e1bd;
+}
+
+/* Secondary and delete buttons */
+.investment-page .investment-secondary-button {
+  background: #172338;
+  color: #e4eafa;
+  border: 1px solid #293750;
+}
+
+.investment-page .investment-delete-button {
+  background: #301d2a;
+  color: #ff8c9a;
+  border: 1px solid #56303d;
+}
+
+/* Profit and loss */
+.investment-page .investment-positive {
+  color: #40d6a5;
+}
+
+.investment-page .investment-negative {
+  color: #ff7d87;
+}
+
+/* Dividers and investment icon */
+.investment-page .investment-values,
+.investment-page .investment-card-actions {
+  border-color: #253149;
+}
+
+.investment-page .investment-type-icon,
+.investment-page .investment-empty-icon {
+  background: #17352f;
+  color: #40d6a5;
+}
+
+/* Status messages */
+.investment-page .investment-error {
+  background: #301d2a;
+  color: #ff9ca6;
+}
+
+.investment-page .investment-message {
+  background: #17352f;
+  color: #40d6a5;
+}
+
+/* Back button and investment cards */
+.investment-page .investment-card {
+  border-radius: 12px;
+}
+
+.investment-page .investment-goal,
+.investment-page .investment-date,
+.investment-page .investment-notes {
+  color: #8296b6;
+}
